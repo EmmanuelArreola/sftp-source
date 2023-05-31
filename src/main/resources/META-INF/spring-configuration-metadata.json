@@ -1,0 +1,157 @@
+{
+  "groups": [
+    {
+      "name": "rabbit",
+      "type": "com.cloudgen.n3xgen.rabbitsink.bean.RabbitConsumerProperties",
+      "sourceType": "com.cloudgen.n3xgen.rabbitsink.bean.RabbitConsumerProperties"
+    }
+  ],
+  
+  "properties": [
+    {
+      "name": "rabbit.exchange",
+      "type": "java.lang.String",
+      "sourceType": "com.cloudgen.n3xgen.rabbitsink.bean.RabbitConsumerProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "rabbit.exchangeExpression",
+      "type": "org.springframework.expression.Expression",
+      "sourceType": "com.cloudgen.n3xgen.rabbitsink.bean.RabbitConsumerProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "rabbit.routingKey",
+      "type": "java.lang.String",
+      "sourceType": "com.cloudgen.n3xgen.rabbitsink.bean.RabbitConsumerProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "rabbit.routingKeyExpression",
+      "type": "org.springframework.expression.Expression",
+      "sourceType": "com.cloudgen.n3xgen.rabbitsink.bean.RabbitConsumerProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "rabbit.persistentDeliveryMode",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.cloudgen.n3xgen.rabbitsink.bean.RabbitConsumerProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "rabbit.mappedRequestHeaders",
+      "type": "java.lang.String[]",
+      "sourceType": "com.cloudgen.n3xgen.rabbitsink.bean.RabbitConsumerProperties",
+      "defaultValue": "{'*'}"
+    },
+    {
+      "name": "rabbit.converterBeanName",
+      "type": "java.lang.String",
+      "sourceType": "com.cloudgen.n3xgen.rabbitsink.bean.RabbitConsumerProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "rabbit.ownConnection",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.cloudgen.n3xgen.rabbitsink.bean.RabbitConsumerProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "rabbit.headersMappedLast",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.cloudgen.n3xgen.rabbitsink.bean.RabbitConsumerProperties",
+      "defaultValue": ""
+    },
+     {
+      "name": "spring.rabbitmq.host",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
+      "defaultValue": "localhost"
+    },
+     {
+      "name": "spring.rabbitmq.port",
+      "type": "java.lang.Integer",
+      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
+      "defaultValue": ""
+    },
+     {
+      "name": "spring.rabbitmq.username",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
+      "defaultValue": "guest"
+    },
+     {
+      "name": "spring.rabbitmq.password",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
+      "defaultValue": "guest"
+    },
+     {
+      "name": "spring.rabbitmq.ssl",
+      "type": "org.springframework.boot.autoconfigure.amqp.RabbitProperties.Ssl",
+      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
+      "defaultValue": ""
+    },
+     {
+      "name": "spring.rabbitmq.virtualHost",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
+      "defaultValue": ""
+    },
+     {
+      "name": "spring.rabbitmq.addresses",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
+      "defaultValue": ""
+    },
+     {
+      "name": "spring.rabbitmq.addressShuffleMode",
+      "type": "org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.AddressShuffleMode",
+      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
+      "defaultValue": "AddressShuffleMode.NONE"
+    },
+     {
+      "name": "spring.rabbitmq.requestedHeartbeat",
+      "type": "java.time.Duration",
+      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
+      "defaultValue": ""
+    },
+     {
+      "name": "spring.rabbitmq.requestedChannelMax",
+      "type": "java.lang.Number",
+      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
+      "defaultValue": 2047
+    },
+     {
+      "name": "spring.rabbitmq.publisherReturns",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "spring.rabbitmq.publisherConfirmType",
+      "type": "org.springframework.amqp.rabbit.connection.CachingConnectionFactory.ConfirmType",
+      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "spring.rabbitmq.connectionTimeout",
+      "type": "java.time.Duration",
+      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "spring.rabbitmq.channelRpcTimeout",
+      "type": "java.time.Duration",
+      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "spring.rabbitmq.cache",
+      "type": "org.springframework.boot.autoconfigure.amqp.RabbitProperties.Cache",
+      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
+      "defaultValue": ""
+    }
+    
+  ]
+}

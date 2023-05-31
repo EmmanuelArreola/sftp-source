@@ -1,0 +1,78 @@
+{ "properties": [
+    {
+      "name": "sftp.supplier.factory",
+      "type": "com.cloudgen.n3xgen.SFTP.bean.SftpSupplierProperties.Factory",
+      "description": "Session factory properties."
+    },
+     {
+      "name": "sftp.supplier.remoteDir",
+      "type": "java.lang.String",
+      "description": "The remote FTP directory."
+    },
+     {
+      "name": "sftp.supplier.tmpFileSuffix",
+      "type": "java.lang.String",
+      "description": "The suffix to use while the transfer is in progress."
+    },
+     {
+      "name": "sftp.supplier.remoteFileSeparator",
+      "type": "org.springframework.expression.Expression",
+      "description": "The remote file separator."
+    },
+     {
+      "name": "sftp.supplier.deleteRemoteFiles",
+      "type": "java.lang.Boolean",
+      "description": "Set to true to delete remote files after successful transfer."
+    },
+     {
+      "name": "sftp.supplier.renameRemoteFilesTo",
+      "type": "org.springframework.expression.Expression",
+      "description": "A SpEL expression resolving to the new name remote files must be renamed to after successful transfer."
+    },
+     {
+      "name": "sftp.supplier.localDir",
+      "type": "java.io.File",
+      "description": "The local directory to use for file transfers."
+    },
+    {
+      "name": "sftp.supplier.autoCreateLocalDir",
+      "type": "java.lang.Boolean",
+      "description": "Set to true to create the local directory if it does not exist."
+    },
+    {
+      "name": "sftp.supplier.filenamePattern",
+      "type": "java.lang.String",
+      "description": "A filter pattern to match the names of files to transfer."
+    },
+    {
+      "name": "sftp.supplier.stream",
+      "type": "java.lang.Boolean",
+      "description": "Set to true to stream the file rather than copy to a local directory.."
+    },
+        {
+      "name": "sftp.factory.host",
+      "type": "java.lang.String",
+      "description": "The host name of the server."
+    },
+        {
+      "name": "sftp.factory.username",
+      "type": "java.lang.String",
+      "description": "The username to use to connect to the server."
+    },
+        {
+      "name": "sftp.factory.password",
+      "type": "java.lang.String",
+      "description": "The password to use to connect to the server."
+    },
+    {
+      "name": "sftp.factory.port",
+      "type": "java.lang.Number",
+      "description": "The password to use to connect to the server."
+    },
+    {
+      "name": "sftp.factory.allowUnknownKeys",
+      "type": "java.lang.Boolean",
+      "description": "The password to use to connect to the server."
+    }
+  ]
+}

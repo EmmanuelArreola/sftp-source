@@ -1,157 +1,108 @@
 {
   "groups": [
     {
-      "name": "rabbit",
-      "type": "com.cloudgen.n3xgen.rabbitsink.bean.RabbitConsumerProperties",
-      "sourceType": "com.cloudgen.n3xgen.rabbitsink.bean.RabbitConsumerProperties"
+      "name": "sftp.supplier",
+      "type": "com.cloudgen.n3xgen.SFTP.bean.SftpSupplierProperties",
+      "sourceType": "com.cloudgen.n3xgen.SFTP.bean.SftpSupplierProperties"
     }
   ],
   
   "properties": [
     {
-      "name": "rabbit.exchange",
+      "name": "sftp.supplier.factory",
+      "type": "com.cloudgen.n3xgen.SFTP.bean.SftpSupplierProperties.Factory",
+      "sourceType": "com.cloudgen.n3xgen.SFTP.bean.SftpSupplierProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "sftp.supplier.remoteDir",
       "type": "java.lang.String",
-      "sourceType": "com.cloudgen.n3xgen.rabbitsink.bean.RabbitConsumerProperties",
+      "sourceType": "com.cloudgen.n3xgen.SFTP.bean.SftpSupplierProperties",
       "defaultValue": ""
     },
     {
-      "name": "rabbit.exchangeExpression",
-      "type": "org.springframework.expression.Expression",
-      "sourceType": "com.cloudgen.n3xgen.rabbitsink.bean.RabbitConsumerProperties",
-      "defaultValue": ""
-    },
-    {
-      "name": "rabbit.routingKey",
+      "name": "sftp.supplier.tmpFileSuffix",
       "type": "java.lang.String",
-      "sourceType": "com.cloudgen.n3xgen.rabbitsink.bean.RabbitConsumerProperties",
+      "sourceType": "com.cloudgen.n3xgen.SFTP.bean.SftpSupplierProperties",
       "defaultValue": ""
     },
     {
-      "name": "rabbit.routingKeyExpression",
+      "name": "sftp.supplier.remoteFileSeparator",
       "type": "org.springframework.expression.Expression",
-      "sourceType": "com.cloudgen.n3xgen.rabbitsink.bean.RabbitConsumerProperties",
+      "sourceType": "com.cloudgen.n3xgen.SFTP.bean.SftpSupplierProperties",
       "defaultValue": ""
     },
     {
-      "name": "rabbit.persistentDeliveryMode",
+      "name": "sftp.supplier.deleteRemoteFiles",
       "type": "java.lang.Boolean",
-      "sourceType": "com.cloudgen.n3xgen.rabbitsink.bean.RabbitConsumerProperties",
+      "sourceType": "com.cloudgen.n3xgen.SFTP.bean.SftpSupplierProperties",
       "defaultValue": ""
     },
     {
-      "name": "rabbit.mappedRequestHeaders",
-      "type": "java.lang.String[]",
-      "sourceType": "com.cloudgen.n3xgen.rabbitsink.bean.RabbitConsumerProperties",
+      "name": "sftp.supplier.renameRemoteFilesTo",
+      "type": "org.springframework.expression.Expression",
+      "sourceType": "com.cloudgen.n3xgen.SFTP.bean.SftpSupplierProperties",
       "defaultValue": "{'*'}"
     },
     {
-      "name": "rabbit.converterBeanName",
+      "name": "sftp.supplier.localDir",
+      "type": "java.io.File",
+      "sourceType": "com.cloudgen.n3xgen.SFTP.bean.SftpSupplierProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "sftp.supplier.filenamePattern",
       "type": "java.lang.String",
-      "sourceType": "com.cloudgen.n3xgen.rabbitsink.bean.RabbitConsumerProperties",
+      "sourceType": "com.cloudgen.n3xgen.SFTP.bean.SftpSupplierProperties",
       "defaultValue": ""
     },
     {
-      "name": "rabbit.ownConnection",
+      "name": "sftp.supplier.autoCreateLocalDir",
       "type": "java.lang.Boolean",
-      "sourceType": "com.cloudgen.n3xgen.rabbitsink.bean.RabbitConsumerProperties",
-      "defaultValue": ""
-    },
-    {
-      "name": "rabbit.headersMappedLast",
-      "type": "java.lang.Boolean",
-      "sourceType": "com.cloudgen.n3xgen.rabbitsink.bean.RabbitConsumerProperties",
+      "sourceType": "com.cloudgen.n3xgen.SFTP.bean.SftpSupplierProperties",
       "defaultValue": ""
     },
      {
-      "name": "spring.rabbitmq.host",
+      "name": "sftp.supplier.filenamePattern",
       "type": "java.lang.String",
-      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
+      "sourceType": "com.cloudgen.n3xgen.SFTP.bean.SftpSupplierProperties",
       "defaultValue": "localhost"
     },
      {
-      "name": "spring.rabbitmq.port",
-      "type": "java.lang.Integer",
-      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
-      "defaultValue": ""
-    },
-     {
-      "name": "spring.rabbitmq.username",
-      "type": "java.lang.String",
-      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
-      "defaultValue": "guest"
-    },
-     {
-      "name": "spring.rabbitmq.password",
-      "type": "java.lang.String",
-      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
-      "defaultValue": "guest"
-    },
-     {
-      "name": "spring.rabbitmq.ssl",
-      "type": "org.springframework.boot.autoconfigure.amqp.RabbitProperties.Ssl",
-      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
-      "defaultValue": ""
-    },
-     {
-      "name": "spring.rabbitmq.virtualHost",
-      "type": "java.lang.String",
-      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
-      "defaultValue": ""
-    },
-     {
-      "name": "spring.rabbitmq.addresses",
-      "type": "java.lang.String",
-      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
-      "defaultValue": ""
-    },
-     {
-      "name": "spring.rabbitmq.addressShuffleMode",
-      "type": "org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.AddressShuffleMode",
-      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
-      "defaultValue": "AddressShuffleMode.NONE"
-    },
-     {
-      "name": "spring.rabbitmq.requestedHeartbeat",
-      "type": "java.time.Duration",
-      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
-      "defaultValue": ""
-    },
-     {
-      "name": "spring.rabbitmq.requestedChannelMax",
-      "type": "java.lang.Number",
-      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
-      "defaultValue": 2047
-    },
-     {
-      "name": "spring.rabbitmq.publisherReturns",
+      "name": "sftp.supplier.stream",
       "type": "java.lang.Boolean",
-      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
+      "sourceType": "com.cloudgen.n3xgen.SFTP.bean.SftpSupplierProperties",
       "defaultValue": ""
     },
-    {
-      "name": "spring.rabbitmq.publisherConfirmType",
-      "type": "org.springframework.amqp.rabbit.connection.CachingConnectionFactory.ConfirmType",
-      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
+     {
+      "name": "sftp.factory.host",
+      "type": "java.lang.String",
+      "sourceType": "com.cloudgen.n3xgen.SFTP.bean.SftpSupplierProperties",
+      "defaultValue": "guest"
+    },
+     {
+      "name": "sftp.factory.username",
+      "type": "java.lang.String",
+      "sourceType": "com.cloudgen.n3xgen.SFTP.bean.SftpSupplierProperties",
+      "defaultValue": "guest"
+    },
+     {
+      "name": "sftp.factory.password",
+      "type": "java.lang.String",
+      "sourceType": "com.cloudgen.n3xgen.SFTP.bean.SftpSupplierProperties",
       "defaultValue": ""
     },
-    {
-      "name": "spring.rabbitmq.connectionTimeout",
-      "type": "java.time.Duration",
-      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
+     {
+      "name": "sftp.factory.port",
+      "type": "java.lang.Number",
+      "sourceType": "com.cloudgen.n3xgen.SFTP.bean.SftpSupplierProperties",
       "defaultValue": ""
     },
-    {
-      "name": "spring.rabbitmq.channelRpcTimeout",
-      "type": "java.time.Duration",
-      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
-      "defaultValue": ""
-    },
-    {
-      "name": "spring.rabbitmq.cache",
-      "type": "org.springframework.boot.autoconfigure.amqp.RabbitProperties.Cache",
-      "sourceType": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
+     {
+      "name": "sftp.factory.allowUnknownKeys",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.cloudgen.n3xgen.SFTP.bean.SftpSupplierProperties",
       "defaultValue": ""
     }
-    
   ]
 }

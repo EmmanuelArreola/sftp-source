@@ -73,6 +73,21 @@
       "name": "sftp.factory.allowUnknownKeys",
       "type": "java.lang.Boolean",
       "description": "The password to use to connect to the server."
+    }, 
+     {
+      "name": "file.consumer.mode",
+      "type": "com.cloudgen.n3xgen.SFTP.utils.FileReadingMode",
+      "description": ""
+    }, 
+     {
+      "name": "file.consumer.withMarkers",
+      "type": "java.lang.Boolean",
+      "description": ""
+    } , 
+     {
+      "name": "file.consumer.markersJson",
+      "type": "java.lang.Boolean",
+      "description": ""
     }
   ]
 }

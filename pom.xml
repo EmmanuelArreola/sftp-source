@@ -17,6 +17,12 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>2021.0.7</spring-cloud.version>
+
+		<aws-java-sdk.version>1.11.951</aws-java-sdk.version>
+		<spring-integration-aws.version>2.5.0</spring-integration-aws.version>
+		<spring-integration-hazelcast.version>3.0.0</spring-integration-hazelcast.version>
+		<curator.version>4.0.1</curator.version>
+
 	</properties>
 	<dependencies>
 		<dependency>
@@ -55,6 +61,111 @@
 			<artifactId>spring-integration-file</artifactId>
 		</dependency>
 
+		<!-- Metadata dependencies -->
+
+		<dependency>
+			<groupId>org.springframework.integration</groupId>
+			<artifactId>spring-integration-redis</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<!--MongoDB-->
+		<dependency>
+			<groupId>org.springframework.integration</groupId>
+			<artifactId>spring-integration-mongodb</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>de.flapdoodle.embed</groupId>
+			<artifactId>de.flapdoodle.embed.mongo</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!--Gemfire-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-logging</artifactId>
+			<optional>true</optional>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.logging.log4j</groupId>
+					<artifactId>log4j-to-slf4j</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.integration</groupId>
+			<artifactId>spring-integration-gemfire</artifactId>
+			<optional>true</optional>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.data</groupId>
+					<artifactId>spring-data-gemfire</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-geode</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<!--JDBC-->
+		<dependency>
+			<groupId>org.springframework.integration</groupId>
+			<artifactId>spring-integration-jdbc</artifactId>
+			<optional>false</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+			<optional>false</optional>
+		</dependency>
+
+		<!--Zookeeper-->
+		<dependency>
+			<groupId>org.springframework.integration</groupId>
+			<artifactId>spring-integration-zookeeper</artifactId>
+			<optional>false</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.curator</groupId>
+			<artifactId>curator-test</artifactId>
+			<scope>false</scope>
+		</dependency>
+
+		<!--Hazelcast-->
+		<dependency>
+			<groupId>org.springframework.integration</groupId>
+			<artifactId>spring-integration-hazelcast</artifactId>
+			<version>${spring-integration-hazelcast.version}</version>
+			<optional>true</optional>
+		</dependency>
+
+		<!--DynamoDB-->
+		<dependency>
+			<groupId>org.springframework.integration</groupId>
+			<artifactId>spring-integration-aws</artifactId>
+			<version>${spring-integration-aws.version}</version>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-dynamodb</artifactId>
+			<version>${aws-java-sdk.version}</version>
+			<optional>false</optional>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -73,6 +184,14 @@
 			<classifier>test-binder</classifier>
 			<type>test-jar</type>
 		</dependency>
+
+		<!--
+		https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-autoconfigure -->
+<!--		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-autoconfigure</artifactId>
+			<version>3.1.0</version>
+		</dependency>-->
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
